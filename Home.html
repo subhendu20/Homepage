@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+          <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+          <title>Home</title>
+</head>
+<style>
+          * {
+                    padding: 0px;
+                    margin: 0px;
+                    box-sizing: border-box;
+          }
+
+          html {
+                    font-size: 62.5%;
+          }
+
+          body {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                              sans-serif;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    ;
+          }
+
+          .main {
+                    width: 100%;
+
+          }
+          /*------------------------------------------ navbar ------------------------------------------------*/
+
+          nav {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+
+          }
+
+          nav span {
+                    width: 30%;
+                    padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+          }
+
+          nav span input {
+                    border: none;
+                    background: none;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    
+                    outline: none;
+                    padding: 10px;
+                    width: 90%;
+                    margin: 0px auto;
+                    color: rgb(75, 66, 66);
+                    font-size: 15px;
+                    border-bottom: 1px solid rgb(100, 98, 98);
+
+          }
+          nav span.search{
+                    width: 20%;
+                    
+                    padding: 0px;
+          }
+          nav span.search:hover{
+                    border: none;
+          }
+
+          nav span input:hover {
+                    background-color: rgb(168, 161, 161);
+                    border:none
+
+
+
+
+          }
+
+          nav span.menu {
+                    justify-content: flex-end;
+                    font-weight: 400;
+                    font-size: 15px;
+          }
+
+          nav span input::placeholder {
+                    font-size: 15px;
+                    
+
+          }
+
+          nav span a {
+                    text-decoration: none;
+                    color: rgb(51, 49, 49);
+                    margin: 0px 20px;
+                    font-weight: 400;
+          }
+
+          nav span span {
+
+                    padding: 10px;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    background-color: rgb(17, 76, 87);
+                    color: rgb(252, 250, 250);
+                    width: fit-content;
+                    position: relative;
+
+          }
+         
+
+          nav span.logo img{
+                    width: 80px;
+                    height:50px;
+
+
+          }
+
+
+
+
+            /* -------------------------------------------------dividers---------------------------------------------- */
+
+            .main .divider {
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                    font-size: 30px;
+                    color: black;
+                    font-weight: 500;
+                    transition: 0.3s;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    
+          }
+          .main .divider p.small{
+                    font-size: 15px;
+                    color:rgb(82, 80, 80);
+          }
+          .main .divider-third{
+                    margin: 50px 0px;
+                    padding: 0px;
+                  
+          }
+          .main div:hover .divider{
+                    transform: scale(1.2);
+          }
+
+          .main .divider-second{
+                    color: white;
+                    font-size: 40px;
+                    font-weight: 300;
+          }
+          .main div:hover .divider-second{
+                    transform: none;
+
+          }
+          .main div .divider-second{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    
+          }
+          .main div .divider-second p.small{
+                    font-size: 20px;
+                    text-align: justify;
+                    margin: 20px 0px;
+                    color: white;
+          }
+          .main div .divider-second button{
+                    border:none;
+                    border-radius: 5px;
+                    background-color: white;
+                    color:rgb(17, 76, 87);
+                    padding: 10px;
+                    font-size: 20px;
+                    font-weight: 100;
+                    transition: 0.2s;
+          }
+          .main div .divider-second button:hover{
+                    transform: scale(1.1);
+          }
+
+
+
+
+          /* ------------------------------------------------components---------------------------------------- */
+          .main .first {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    min-height: 500px;
+
+          }
+
+          .main .first div {
+                    width: 50%;
+                    height: auto;
+                    margin: 30px 0px;
+                    margin-bottom: 10px;
+                    
+                    font-size: 25px;
+                    padding: 30px 5%;
+                    color: rgb(75, 74, 74);
+                    font-weight: 100px;
+                    display: flex;
+                    flex-direction: column;
+
+
+
+
+          }
+
+          .main .first div p {
+                    margin: 20px 0px;
+                    text-align: justify;
+                    font-weight: 100;
+          }
+
+          .main .first div p.heading {
+                    font-weight: 300;
+          }
+
+          .main .first div.details-with-button p.heading {
+                    font-size: 60px;
+                    color: black;
+                    font-weight: 200;
+                    text-align: center;
+
+          }
+
+          .main .first div span.buttons {
+                    display: flex;
+                    justify-content: center;
+                    width: 80%;
+                    margin: 20px auto;
+
+          }
+
+          .main .first div span.buttons button {
+                    border: 1px solid rgb(17, 76, 87);
+                    color: rgb(17, 76, 87);
+                    font-size: 20px;
+                    padding: 10px;
+                    
+                    border-radius: 5px;
+                    margin: 0px 20px;
+                    transition: 0.5s;
+                    font-weight: 100;
+
+          }
+
+          .main .first div span.buttons button.free-trial {
+                    background-color: rgb(17, 76, 87);
+                    color: white;
+
+          }
+
+          .main .first div span.buttons button:hover {
+                    background-color: rgb(17, 76, 87);
+                    border-color: rgb(17, 76, 87);
+                    color: white;
+          }
+
+
+
+        
+
+          .main .second {
+                    padding: 10px;
+                    width: 100%;
+                    display: flex;
+                    
+                    flex-direction: column;
+                    
+                    
+
+          }
+          .main .second div{
+                    margin: 10px 0px;
+                    position: relative;
+          }
+          .main .second div div{
+                    position: relative;
+          }
+          .main .second div div div.icon-title{
+                    position: absolute;
+                    top:20%;
+                    left:25%;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 40px;
+                    justify-content: center;
+                    align-items: center;
+                    width: auto;
+                    height: auto;
+          }
+          .main .second div div div.icon-title p{
+                    font-size: 20px;
+                    margin: 10px 0px;
+
+          }
+          
+          .main .second div.step-row{
+                    width:100%;
+                    display: flex;
+                    justify-content: space-evenly;
+          }
+
+
+          .main .second div div {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                    overflow: hidden;
+                   
+                
+                    color: white;
+                    padding: 20px;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    
+                    
+
+
+          }
+          .none{
+                    display:none;
+                    font-size: 15px;
+          }
+          .flex{
+                    display: flex;
+                    font-size: 15px;
+                    top:40%;
+                    left:20%;
+                    text-align: justify;
+                    transition: 0.3s;
+
+          }
+
+          .main .second div.step3 {
+                    background-color: rgb(37, 37, 99);
+          }
+
+          .main .second div.step2 {
+                    background-color: rgb(39, 199, 151);
+          }
+
+          .main .second div.step1 {
+                    background-color: rgb(228, 83, 83);
+                    
+          }
+
+          .main .third {
+                    width: 100%;
+                    margin: 50px 0px;
+                    padding: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+          }
+
+          .main .third div {
+                    width: 80%;
+                    
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 10px 0px;
+
+          }
+
+          .main .third div div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20%;
+                    flex-direction: column;
+                    text-align: justify;
+                    transition: 0.3s;
+                    padding: 10px;
+                    border-radius: 10px;
+          }
+          .main .third div div:hover{
+                    background-color: rgb(173, 221, 228);
+          }
+          .main .third div div span{
+                    margin: 10px 0px;
+          }
+
+          .main .third div div span.icon {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color: rgb(57, 156, 173);;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+          }
+
+          .main .third div div span.heading{
+                    font-size: 20px;
+                    font-weight: 300;
+                    color:rgb(17, 17, 17);
+
+                    
+          }
+
+
+          .main .third div div span.details{
+                    font-size: 15px;
+                    font-weight: 100;
+                    color:rgb(126, 110, 110);
+
+
+          }
+
+          .main .four{
+                    width: 100%;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+          }
+          .main .four div{
+                    width: 100%;
+                    
+          }
+          .main .four div.partners{
+                    width: 80%;
+                    display:flex;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0px auto;
+          }
+          .main .four div.partners img{
+                    width: 150px;
+                    height: 100px;
+          }
+
+          .main .Records{
+                    padding: 30px;
+                    width: 100%;
+          }
+          .main .Records div{
+                    width: 80%;
+                    margin: 0px auto;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items:center;
+                    padding: 10px;
+                    background-color:rgb(17, 76, 87); ;
+
+          }
+          .main .Records div div{
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 30px;
+          }
+          .main .Records div div div.record-list{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 50px;
+                    color:white;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.3s;
+          }
+          .main .Records div div div.record-list:hover{
+                    transform: scale(1.1);
+
+          }
+          
+          .main .Records div div.record-list p.count{
+                    font-size: 30px;
+                    font-weight: 600;
+          }
+          .main .Records div div.record-list p{
+                    font-size: 20px;
+                    margin:10px 0px;
+          }
+          .main .reviews{
+                    width:60%;
+                    height:auto;
+                    margin:20px auto;
+                    overflow-x: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+
+          }
+          .main .reviews .review-list{
+                    display: flex;
+                    justify-content: space-between;
+          }
+          .main .reviews::-webkit-scrollbar{
+                    display: none;
+          }
+          .main .reviews .review-box{
+                    width:30%;
+                    height:auto;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                    
+
+          }
+          .main .reviews .review-box span.image{
+                    width: 100%;
+                    height:150px;
+                    padding: 10px;
+
+          }
+          .main .reviews .review-box span.image img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+
+          }
+          .main .reviews .review-box span.name{
+                    font-size: 20px;
+                    color:rgb(43, 38, 38);
+                    font-weight: 200;
+                    text-align: center;
+                    padding: 10px;
+                    font-weight: 400;
+          }
+          .main .reviews .review-box span.review{
+                    font-size: 15px;
+                    color:rgb(109, 105, 105);
+                    font-weight: 100;
+                    text-align: justify;
+                    padding: 10px;
+                    
+
+          }
+
+          .main .footer{
+                    width:100%;
+                    min-height: 300px;
+                    margin-top: 50px;
+                    background-color: rgb(17, 76, 87);
+          }
+          .main .footer .footers-menu{
+                    display:flex;
+                    flex-direction: row;
+                    width: 60%;
+                    justify-content: space-between;
+                    margin: 0px auto;
+          }
+          .main .footer .footers-menu .footer-column{
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color:rgb(12, 12, 12);
+          }
+          .main .footer .footers-menu .footer-column a{
+                    font-size: 15px;
+                    margin:10px 0px;
+                    text-decoration: none;
+                    color: rgb(216, 214, 214);
+
+          }
+          .main .footer .footer-brandings{
+                    width: 60%;
+                    margin:0px auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 15px;
+          }
+          .main .footer .footer-brandings span{
+                    margin:10px 0px;
+          }
+          .main .footer .footer-brandings .brand-logo{
+                    display: flex;
+                    justify-content: space-evenly;
+                    color:rgb(216, 214, 214);
+                    font-size: 30px;
+          }
+          .main .footer .footer-brandings .brand-logo i{
+                    margin: 0px 10px;
+          }
+
+
+</style>
+
+<body>
+          <div class="main">
+                    <nav class="nav">
+                              <span class="logo">
+                                        <img src="./logo jobfreak.png" alt="">
+
+                              </span>
+                              <span class="search">
+                                        <input type="text" placeholder="Search"><i class='bx bx-search-alt' ></i>
+
+                              </span>
+                              <span class="menu">
+                                        <a href="/pricing">Pricing</a>
+                                        <a href="/Resource">Resource</a>
+                                        <a href="/Customers">Customers</a>
+                                        <a href="/login">Log in</a>
+                                        <span class="profile-details">
+                                                  <p>Start a free trial</p>
+                                                 
+                                        </span>
+
+                              </span>
+
+                    </nav>
+                    <div class="first brocurs">
+                              <div class="details-with-button">
+                                        <p class="heading">
+                                                  Where great companies<br/> hire great people
+                                        </p>
+                                        
+                                        <p>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quo
+                                                  itaque
+                                                  obcaecati molestias? Laboriosam doloribus dolore praesentium
+                                                  reprehenderit et,
+                                                  odio hic animi eveniet iure cumque eos, nam facilis vel temporibus.
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et
+                                                  </p>
+                                        <span class="buttons">
+                                                  <button class="free-trial">
+                                                            Free trial
+
+                                                  </button>
+                                                  <button class="post-requirement">
+                                                            Join Xhire
+
+                                                  </button>
+                                        </span>
+
+
+                              </div>
+                              <div class="image">
+                                        <img src="./logo jobfreak.png" alt="">
+
+                              </div>
+
+                    </div>
+                    
+                    <div class="second steps">
+                              <div class="divider ">
+                                        <p>You are Three steps away from your first hiring</p>
+                                        <!-- <p class="small">from your first post for a hire</p> -->
+          
+                              </div>
+                              
+                              <div class="step-row">
+                                        <div class="step1 step">
+                                                  <div class="icon-title">
+                                                            <i class='bx bx-search-alt' ></i>
+                                                            <p>Regester</p>
+                                                  </div>
+                                                  <div class="text none">
+                                                            Lorem ipsum dolor hghjhjj hh onkjk hj sit amet, consectetur adipisicing elit. Sunt molestiae cum nam dolorum est eveniet! Quasi doloribus reiciendis itaque repudiandae.
+                                                  </div>
+
+
+                                        </div>
+                                        <div class="step2 step">
+                                                  <div class="icon-title">
+                                                            <i class='bx bx-user-check' ></i>
+                                                            <p>Get verified</p>
+                                                  </div>
+                                                  <div class="text none">
+                                                            Lorem ipsum dolor sit amet, hghjhjj hh onkjk hj consectetur adipisicing elit. Sunt molestiae cum nam dolorum est eveniet! Quasi doloribus reiciendis itaque repudiandae.
+                                                  </div>
+          
+                                        </div>
+                                        <div class="step3 step">
+                                                  <div class="icon-title">
+                                                            <i class='bx bxs-devices' ></i>
+                                                            <p>Post Hiring</p>
+                                                  </div>
+                                                  <div class="text none">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing hghjhjj hh onkjk hj elit. Sunt molestiae cum nam dolorum est eveniet! Quasi doloribus reiciendis itaque repudiandae.
+                                                  </div>
+          
+                                        </div>
+
+                              </div>
+                             
+
+
+                    </div>
+                   
+                    <div class="third services ">
+                              <div class="divider divider-third">
+                                        Our Services
+                              </div>
+
+                              <div class="first-row">
+                                        <div class="one">
+                                                  <span class="icon">
+                                                            <i class='bx bx-desktop' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            Saas
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita consequatur voluptatem sapiente ipsum pariatur, deleniti distinctio doloribus
+
+                                                  </span>
+
+                                        </div>
+                                        <div class="two">
+                                                  <span class="icon">
+                                                            <i class='bx bx-laptop' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            Developer
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, magnam quisquam possimus veritatis illum quam soluta quos expedita ipsam adipisci.
+
+                                                  </span>
+
+
+                                        </div>
+                                        <div class="three">
+                                                  <span class="icon">
+                                                            <i class='bx bxl-sketch' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            Designer
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga repudiandae ex voluptas ipsam rerum molestiae culpa laborum dolore ab!
+
+                                                  </span>
+
+
+                                        </div>
+
+                              </div>
+                              <div class="second-row">
+                                        <div class="one">
+                                                  <span class="icon">
+                                                            <i class='bx bxl-blogger' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            Blogger
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quisquam ex saepe sit dicta, incidunt iusto est? Voluptatibus, ea iste.
+
+                                                  </span>
+
+                                        </div>
+                                        <div class="two">
+                                                  <span class="icon">
+                                                            <i class='bx bxs-terminal' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            SAP
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis sunt officiis impedit natus sequi deserunt. Laborum corporis totam quibusdam.
+
+                                                  </span>
+
+
+                                        </div>
+                                        <div class="three">
+                                                  <span class="icon">
+                                                            <i class='bx bxl-magento' ></i>
+
+                                                  </span>
+                                                  <span class="heading">
+                                                            M.L
+                                                  </span>
+                                                  <span class="details">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae vitae, pariatur repellat magnam asperiores ab debitis officiis dolorum natus.
+
+                                                  </span>
+
+
+                                        </div>
+
+                              </div>
+
+
+                    </div>
+                    <div class="Records">
+
+                              <div class="record-box">
+                                        <div class="divider divider-second">
+                                                 <p>Our Happy Recruiters Family</p> 
+                                                 <p class="small">By using Workable, we’re now attracting a new generation of candidates and building a richer and more robust workforce.With the insights we can gather using Workable, we’re able to reduce our dependence on external recruitment agencies to just one or two specialty roles a year.We’ve been filling positions a lot faster because our managers are now involved in the hiring process. So far we’ve made 150 hires in 6 months and we’ve reduced our time to hire from 50 days to 26.</p>
+                                                 <button>Show details</button>
+                                        </div>
+                                        <div class="rec">
+                                                  <div class="record-list">
+                                                            <i class='bx bx-male' ></i>
+                                                            <p class="count">223000</p>
+                                                            <p>Candidates</p>
+          
+                                                  </div>
+                                                  <div class="record-list">
+                                                            <i class='bx bxs-briefcase-alt-2' ></i>
+                                                            <p class="count">2000</p>
+                                                            <p>Hires</p>
+          
+                                                            
+                                                  </div>
+                                                  <div class="record-list">
+                                                            <i class='bx bx-buildings' ></i>
+                                                            <p class="count">23300</p>
+                                                            <p>Companies</p>
+                                                            
+                                                  </div>
+
+                                        </div>
+                                        
+                              </div>
+
+                    </div>
+                    <div class="four  partners">
+                              <div class="divider divider-third">
+                                        Our Leading Partnars
+          
+                              </div>
+                              <div class="partners">
+                                        <img src="./Aveva-Logo.wine.png" alt="loading">
+                              <img src="./Capgemini-Logo.wine.png" alt="loading">
+                              <img src="./Atos-Logo.wine.png" alt="loading">
+                              <img src="./Accenture-Logo.wine.png" alt="loading">
+                              <img src="./Hexaware_Technologies-Logo.wine.png" alt="loading">
+                              <img src="./CGI_Inc.-Logo.wine.png" alt="loading">
+
+                              </div>
+                              
+
+                    </div>
+                    
+                    <div class="reviews">
+                              <div class="divider divider-third">
+                                        Our Happy Recruiters Family
+          
+                              </div>
+                              <div class="review-list">
+                                        <div class="review-box">
+                                                  <span class="image">
+          
+                                                  </span>
+                                                  <span class="name">
+                                                            Nicky
+          
+                                                  </span>
+                                                  <span class="review">
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium commodi corporis atque consequatur voluptatem id a, recusandae asperiores similique."
+          
+                                                  </span>
+                                        </div>
+                                        <div class="review-box">
+                                                  <span class="image">
+          
+                                                  </span>
+                                                  <span class="name">
+                                                            Jecob
+          
+                                                  </span>
+                                                  <span class="review">
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quibusdam sequi provident adipisci est aperiam ullam blanditiis. At, veritatis error!"
+                                                            
+                                                  </span>
+                                        </div>
+                                        <div class="review-box">
+                                                  <span class="image">
+                                                            
+          
+                                                  </span>
+                                                  <span class="name">
+                                                            Sandi
+                                                            
+          
+                                                  </span>
+                                                  <span class="review">
+                                                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloribus consequuntur nihil quo laudantium tempora doloremque, ipsam hic deleniti iusto!"
+                                                            
+                                                  </span>
+                                        </div>
+          
+                              </div>
+                              
+                    </div>
+
+                    <div class="footer">
+                              <div class="footers-menu">
+                                        <div class="footer-column">
+                                                  <a href="">Why xhire?</a>
+                                                  <a href="">Requirement Software</a>
+                                                  <a href="">Requirement Marketing</a>
+                                                  <a href="">Candidate Experience</a>
+                                                  <a href="">Candidate Screening</a>
+                                                  <a href="">Requirement System</a>
+                                                  
+
+
+                                        </div>
+                                        <div class="footer-column">
+                                                  <a href="">Early Stage</a>
+                                                  <a href="">Startups</a>
+                                                  <a href="">Restuarants</a>
+                                                  <a href="">Small Business</a>
+                                                  <a href="">Marketing & Advertising
+                                                  </a>
+                                                  <a href="">Tech</a>
+                                                  
+                                                  
+                                        </div>
+                                        <div class="footer-column">
+                                                  <a href="">Pricing</a>
+                                                  <a href="">About Us</a>
+                                                  <a href="">Careers</a>
+                                                  <a href="">Blog</a>
+                                                  <a href="">Templates</a>
+                                                  <a href="">Solutions Program</a>
+                                                  
+                                                  
+                                        </div>
+
+                              </div>
+                              <div class="footer-brandings">
+                                        <span class="brand-logo">
+                                                  <i class='bx bxl-twitter'></i>
+                                                  <i class='bx bxl-linkedin' ></i>
+                                                  <i class='bx bxl-facebook-square' ></i>
+                                                  <i class='bx bxl-instagram' ></i>
+                                                  <i class='bx bxl-youtube' ></i>
+
+
+
+                                        </span>
+                                        <span class="copyright-message">
+                                                  <i class='bx bx-copyright'></i> California USA, Inc. All rights reserved 
+
+                                        </span>
+
+                              </div>
+                              
+                              
+
+                    </div>
+
+ <script>
+          $(window).scroll(function(){
+                    var count = $(window).scrollTop()
+                    if(count>=100 && count<700){
+                              $('.step').css({'height':(250+(count/2))+'px','width':(250+(count/2))+'px'})
+
+
+                    }
+
+                    else{
+                              $('.step').css({'height':(250)+'px','width':(250)+'px'})
+
+                    }
+                   
+
+                    if(count>250 && count<700){
+                              $('.text').removeClass('none').addClass('flex')
+                    }
+                    else{
+                              $('.text').removeClass('flex').addClass('none')
+                    }
+
+          })
+
+
+          
+ </script>         </div>
+</body>
+
+</html>
